@@ -1,7 +1,63 @@
-div{
-    background-color: black;
-    display: flex;
+.overlay-container {
+    position: relative;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 1;
+}
+
+.overlay-content h4,
+.overlay-content p {
+    color: white;
+    /* Set text color to white */
+}
+
+/* Style for the bubble-shaped dropdown */
+.overlay-content select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background: transparent;
+    padding: 10px 30px 10px 15px;
+    font-size: 16px;
+    border-radius: 25px;
+    /* Adjust the border radius to change the shape */
+    border: 2px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.overlay-content select::-ms-expand {
+    display: none;
+}
+
+#course-dropdown::before {
+    content: '\25BC';
+    /* Unicode character for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.hero {
+    /* Set the background image */
+    background-image: url('./assets/coolBackground.jpg');
+    /* Replace 'path_to_your_image.jpg' with the actual path to your image */
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    width: 230vh;
+    display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
