@@ -1,5 +1,6 @@
 import Header from "./Header";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Main = () => {
     const courses = {
@@ -76,7 +77,9 @@ const Main = () => {
                         ))}
                     </select>
                 </div>
-                <button onClick={handleStartClick}>Start</button>
+                <Link to="/quiz">
+                    <button onClick={handleStartClick}>Start</button>
+                </Link>
             </section>
         </>
     );
