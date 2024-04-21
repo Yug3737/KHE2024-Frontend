@@ -5,6 +5,8 @@
 
 .container {
     background-image: url('./assets/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
     padding: 20px;
     display: flex;
@@ -25,39 +27,31 @@
     margin-bottom: 20px;
     font-size: 20px;
 }
-
 .dropdown-container {
+    display: flex; /* Use flexbox to arrange items in a row */
+    justify-content: center; /* Center items horizontally */
     position: relative;
-    width: 200px; /* Adjust as needed */
-    margin: 0 auto; /* Center horizontally */
 }
 
 .dropdown {
-    width: 100%;
+    margin: 70px;
+    width: 150px;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
-    appearance: none; /* Remove default arrow */
-    -webkit-appearance: none; /* Remove default arrow on Safari */
-    -moz-appearance: none; /* Remove default arrow on Firefox */
+
 }
 
-.dropdown-container::after {
-    content: '\25BC'; /* Unicode character for arrow */
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    pointer-events: none;
-}
+
 
 /* Focus styles */
 .dropdown:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
+
 
 
 

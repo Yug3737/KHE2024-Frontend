@@ -1,6 +1,3 @@
-
-
-
 const Header = () => {
     return (
         <>
